@@ -1,0 +1,32 @@
+<br>
+<h1>Listing Users</h1>
+
+<table id="listing">
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Email</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <% @users.each do |user| %>
+      <tr class="<%= cycle("odd_row", "even_row", name: "row_class") -%>">
+
+        <% if not user.image.nil? %>
+            <td class=""><%= image_tag(user.image, height:80, width:80, alt: user.name, class: "profileImage") %></td>
+        <% end %>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
+      </tr>
+    <% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User', new_user_path %>
+

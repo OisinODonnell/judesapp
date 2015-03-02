@@ -1,0 +1,28 @@
+<br>
+<h1>Listing Attendance</h1>
+
+<table id="listing">
+  <tr>
+    <th>Training Date</th>
+    <th>Player</th>
+    <th>Attendance</th>
+    <th>Excuse</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @attends.each do |attend| %>
+      <tr class="<%= cycle("odd_row", "even_row", name: "row_class") -%>">
+    <td><%= attend.training_event.training_date %></td>
+    <td><%= attend.player.name %></td>
+    <td><%= attend.attendance %></td>
+    <td><%= attend.excuse %></td>
+    <td><%= link_to 'Edit', edit_attend_path(attend) %></td>
+    <td><%= link_to 'Destroy', attend, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Attendance Record', new_attend_path %>

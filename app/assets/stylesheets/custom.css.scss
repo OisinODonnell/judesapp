@@ -1,0 +1,308 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea;
+
+$grayLight:  #404040;
+$gray: #808080;
+$grayLighter: #808080;
+$grayDarker: #808080;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* universal */
+
+.field {
+  margin-top: 10px;
+  width: 75%;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 5px;
+  background: url('BlueBackground.png');
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $grayMediumLight;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* table */
+table, td, th {
+  border: 1px solid green;
+}
+
+.profileTable {
+   border: 5px solid white;
+   padding: 15px;
+ }
+
+.profileData {
+  border: 5px solid white;
+  padding: 15px;
+}
+
+.profileRow {
+  border: 5px solid white;
+  padding: 15px;
+}
+
+.even_row {
+  background-color: #fff;
+}
+
+.odd_row {
+  background-color: #aaccff;
+}
+
+#listing {
+  font-family: "Lucida Calligraphy", Arial, Helvetica, sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#listing td, #listing th {
+  font-family: "Lucida Calligraphy", Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  border: 1px solid blue;
+  padding: 3px 7px 2px 7px;
+
+}
+
+#listing th {
+  font-family: "Courier New", Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+  text-align: left;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  background-color: blue; //#A7C942;
+  color: white;
+}
+
+#sitemap {
+  font-family: "Courier New", Arial, Helvetica, sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#sitemap td {
+  font-family: "Courier New", Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  border: 1px solid blue;
+}
+
+#sitemap th {
+  font-family: "Courier New", Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+  text-align: left;
+  border: 1px solid blue;
+  padding: 5px 3px 5px 3px;
+
+  background-color: blue; //#A7C942;
+  color: white;
+}
+
+
+
+/* Navigation menu items */
+#navigation1 {
+  font-family: "Lucida Calligraphy", Arial, Helvetica, sans-serif;
+  width: 90%;
+  border-collapse: collapse;
+}
+
+#navigation1 td, #navigation1 th {
+  font-family: "Lucida Calligraphy", Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  border: 1px solid white;
+  padding: 3px 7px 2px 7px;
+}
+
+#navigation1 th {
+  font-family: "Lucida Calligraphy", Arial, Helvetica, sans-serif;
+  font-size: 1.1em;
+  //text-align: left;
+  padding-top: 1px;
+  padding-bottom: 4px;
+  background-color: white; //#A7C942;
+  color: #ffffff;
+}
+
+
+.edit  {
+  align: center;
+  width: 50%;
+  padding-top: 5px;
+
+  border: 1px solid white;
+}
+
+.edit table {
+  align: center;
+  width: 50%;
+  padding-top: 5px;
+  font-size: 1em;
+  border: 1px solid white;
+}
+
+.edit td {
+
+  padding-top: 5px;
+  font-size: 1em;
+  border: 1px solid white;
+}
+
+.controls {
+  width: 50%
+}
+
+.container {
+  align: middle;
+}
+
+/* header */
+
+.header {
+  background:url(images/BlueBackground.png) no-repeat;
+
+}
+
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+  height:260px;
+  width:960px;
+
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 3px solid $grayMediumLight;
+  color: $grayLight;
+  /* pin footer to base of screen */
+  position:absolute;
+  width:100%;
+  bottom:20px;
+  a {
+    color: darkblue;
+    &:hover {
+      color: lightblue;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+
+
+  /* miscellaneous */
+
+  .debug_dump {
+    clear: both;
+    float: left;
+    width: 100%;
+    margin-top: 45px;
+    @include box_sizing;
+  }
+
+  /* sidebar */
+
+  aside {
+    section {
+      padding: 10px 0;
+      border-top: 1px solid $grayLighter;
+      &:first-child {
+        border: 0;
+        padding-top: 0;
+      }
+      span {
+        display: block;
+        margin-bottom: 3px;
+        line-height: 1;
+      }
+      h1 {
+        font-size: 1.4em;
+        text-align: left;
+        letter-spacing: -1px;
+        margin-bottom: 3px;
+        margin-top: 0px;
+      }
+    }
+  }
+
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+  }
+}

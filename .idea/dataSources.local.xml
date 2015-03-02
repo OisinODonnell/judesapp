@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails judesapp: development" uuid="860b291c-dba1-4b51-af1b-437fcbd862f7" />
+    <data-source name="Rails judesapp: test" uuid="6167d0df-a515-4a23-81ef-f1d937f1990b" />
+    <data-source name="Rails judesapp: production" uuid="49df407c-d12c-45de-a048-11bd020bdbeb" />
+  </component>
+</project>

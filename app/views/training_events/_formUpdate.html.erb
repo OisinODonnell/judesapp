@@ -1,0 +1,42 @@
+<%= form_for(@training_event) do |f| %>
+  <% if @training_event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@training_event.errors.count, "error") %> prohibited this training_event from being saved:</h2>
+
+      <ul>
+      <% @training_event.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+      <div align="center">
+      <div style="width: 50%; height: 50%; background-color: white;" class="round">
+        <br>
+        <div  class="field" >
+        <%= f.date_select :training_date, {:prompt => 'Training Date'} %>
+        <%= f.number_field :duration, :placeholder => "Duration (Minutes)" %>
+        <%= f.select(:training_location, options_for_select(
+                  [
+                  ["Pitch 1","Pitch 1"],["Pitch 2","Pitch 2"],["Pitch 3","Pitch 3"],["Pitch 4","Pitch 4"],
+                  ["Hurling Alley","Hurling Alley"], ["All-Weather-Pitch","All-Weather-Pitch"],["Hall","Hall"],["Gym","Gym"]
+                  ]), {:prompt => 'Location'})
+        %>
+        <%= f.select(:training_type, options_for_select(
+                 [
+                  ["Fitness","Fitness"],
+                  ["Strength & Conditioning","Strength & Conditioning"],
+                  ["Technical Work","Technical Work"],
+                  ["Challenge Match","Challenge Match"],
+                  ["Fitness & Technical","Fitness & Technical"],
+                  ["HIIT & Technical","HIIT & Technical"],
+                  ]), {:prompt => 'Training Type'})
+         %>
+        </div>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      </div>
+<% end %>
+</div>

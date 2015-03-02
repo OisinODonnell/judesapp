@@ -1,0 +1,21 @@
+<br>
+<h1>Sitemap</h1>
+<div align="center">
+    <div >
+        <table id="listing">
+
+          <tr>
+            <th>Link</th>
+            <th>Description</th>
+          </tr>
+
+          <% @sitemaps.each do |pp| %>
+              <tr class="<%= cycle("odd_row", "even_row", name: "row_class") -%>">
+                <td><%= link_to pp.url, pp.link %></td>
+                <td><%= pp.description %></td>
+              </tr>
+          <% end %>
+
+        </table>
+    </div>
+</div>

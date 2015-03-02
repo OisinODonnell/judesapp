@@ -1,0 +1,47 @@
+<br>
+<p id="notice"><%= notice %></p>
+<table id="listing">
+  <tr class=>
+    <td class=><b>Training location:</b></td>
+    <td class=><%= @training_event.training_location %></td>
+  </tr>
+  <tr class=>
+    <td class=><b>Training type:</b></td>
+    <td class=><%= @training_event.training_type %></td>
+  </tr>
+  <tr class=>
+    <td class=><b>raining date:</b></td>
+    <td class=> <%= @training_event.training_date.to_s(:long_ordinal) %></td>
+  </tr>
+  <tr class=>
+    <td class=><b>Duration:</b></td>
+    <td class=><%= @training_event.duration %></td>
+  </tr>
+</table>
+<br>
+
+
+
+<h3>Players Attended</h3>
+<table id="listing">
+  <tr>
+    <th>Player Name</th>
+    <th>Address</th>
+    <th>Email Address</th>
+    <th>Phone Number</th>
+  </tr>
+  <% @attendance.each do |att| %>
+      <tr>
+        <td><%= att.player.name %></td>
+        <td><%= att.player.address %></td>
+        <td><%= att.player.email %></td>
+        <td><%= att.player.phone %></td>
+
+      </tr>
+  <% end %>
+</table>
+
+<br>
+<br>
+<%= link_to 'Edit', edit_training_event_path(@training_event) %> |
+<%= link_to 'Back', training_events_path %>

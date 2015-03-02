@@ -1,0 +1,18 @@
+<h1>Sitemap</h1>
+
+
+<Table id="sitemap">
+  <tr>
+    <th>Link</th>
+    <th>Description</th>
+  <tr>
+
+    <%= @paths.each do |pp| %>
+        <tr>
+          <td><%= link_to pp[0], pp[1] %></td>
+          <td><%= pp[2] %></td>
+        <br>
+    <% end %>
+
+</table>
+

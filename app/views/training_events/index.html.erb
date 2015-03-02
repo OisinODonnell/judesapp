@@ -1,0 +1,35 @@
+<br>
+<h1>Listing Training Events</h1>
+
+<table id="listing" class="<%= cycle('even', 'odd') -%>">
+  <tr>
+
+    <th>Training location</th>
+    <th>Training type</th>
+    <th>Training date</th>
+    <th>Duration</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @training_events.each do |training_event| %>
+      <tr class="<%= cycle("odd_row", "even_row", name: "row_class") -%>">
+
+            <td><%= training_event.training_location %></td>
+            <td><%= training_event.training_type %></td>
+            <td><%= training_event.training_date %></td>
+            <td><%= training_event.duration %></td>
+            <td><%= link_to 'Show', training_event %></td>
+            <td><%= link_to 'Edit', edit_training_event_path(training_event) %></td>
+            <td><%= link_to 'Destroy', training_event, confirm: 'Are you sure?', method: :delete %></td>
+
+      </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Training Event', new_training_event_path %>
+
+

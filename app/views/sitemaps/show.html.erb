@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Url:</b>
+  <%= @sitemap.url %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%= @sitemap.link %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @sitemap.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_sitemap_path(@sitemap) %> |
+<%= link_to 'Back', sitemaps_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  training_location: MyString
+  training_type: MyString
+  training_date: 2015-02-15
+  duration: 1
+
+two:
+  training_location: MyString
+  training_type: MyString
+  training_date: 2015-02-15
+  duration: 1

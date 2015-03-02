@@ -1,0 +1,31 @@
+<%= form_for(@attend) do |f| %>
+  <% if @attend.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@attend.errors.count, "error") %> prohibited this attend from being saved:</h2>
+      <ul>
+      <% @attend.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div align="center" >
+      <div style="width: 50%; height: 50%; background-color: white;" class="round">
+        <br>
+        <div align="center" class="field" >
+
+          <%= f.collection_select :player_id, Player.all, :id, :name, {:prompt => 'Select Player'} %>
+
+          <%= f.collection_select :training_event_id, TrainingEvent.all, :id, :training_date, {:prompt => 'Select Training Date'}  %>
+          <%= f.label "Attended" %><br />
+          <%= f.check_box :attendance %><br><br>
+          <%= f.text_field :excuse, :placeholder => "Excuse" %>
+
+        </div>
+        <div class="actions">
+            <%= f.submit "Update Attendance" %>
+        </div>
+      </div>
+    <% end %>
+    </div>

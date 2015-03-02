@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  player_ID: MyString
+  training_event_ID: MyString
+  attendance: false
+  excuse: MyString
+
+two:
+  player_ID: MyString
+  training_event_ID: MyString
+  attendance: false
+  excuse: MyString
